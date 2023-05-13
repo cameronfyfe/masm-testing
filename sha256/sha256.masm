@@ -1,0 +1,12 @@
+use.std::crypto::hashes::sha256
+
+begin
+
+  # load 64 bytes from the advice stack to the main stack
+  # each value is a 32-bit value for the hash computation
+  adv_push.16
+
+  # perform sha256 hash on 64 byte payload
+  exec.sha256::hash_2to1
+
+end

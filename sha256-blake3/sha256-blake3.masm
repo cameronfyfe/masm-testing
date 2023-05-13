@@ -1,0 +1,41 @@
+use.std::crypto::hashes::sha256
+use.std::crypto::hashes::blake3
+
+begin
+
+  # load 64 byte hash input from the advice stack to the main stack
+  # (each value in stack is a 32-bit value for the hash computation)
+  adv_push.16
+
+  # store hash input in memory
+  mem_storew.0 dropw
+  mem_storew.1 dropw
+  mem_storew.2 dropw
+  mem_storew.3
+
+  # load hash input to stack
+       mem_loadw.3 
+  padw mem_loadw.2 
+  padw mem_loadw.1
+  padw mem_loadw.0
+
+  # perform and store sha256 in memory
+  exec.sha256::hash_2to1
+
+  mem_storew.4 dropw
+  mem_storew.5
+
+  # load hash input to stack
+       mem_loadw.3 
+  padw mem_loadw.2 
+  padw mem_loadw.1
+  padw mem_loadw.0
+
+  # perform blake3
+  exec.blake3::hash_2to1
+
+  # load sha256 to stack
+  padw mem_loadw.5
+  padw mem_loadw.4
+
+end

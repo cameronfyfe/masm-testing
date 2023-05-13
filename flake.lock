@@ -1,0 +1,95 @@
+{
+  "nodes": {
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1681202837,
+        "narHash": "sha256-H+Rh19JDwRtpVPAWp64F+rlEtxUWBAQW28eAi3SRSzg=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "cfacdce06f30d2b68473a46042957675eebb3401",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1683408522,
+        "narHash": "sha256-9kcPh6Uxo17a3kK3XCHhcWiV1Yu1kYj22RHiymUhMkU=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "897876e4c484f1e8f92009fd11b7d988a121a4e7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-miden": {
+      "locked": {
+        "lastModified": 1683940718,
+        "narHash": "sha256-cwyfvJeA3kwThZON64iYAdkZDSOjHkASsSEQ/RgjBtI=",
+        "owner": "cameronfyfe",
+        "repo": "nixpkgs",
+        "rev": "a0f0d87cdfd68787c0531b3db48273c32124f24c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cameronfyfe",
+        "ref": "add-miden-vm",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-present": {
+      "locked": {
+        "lastModified": 1683869994,
+        "narHash": "sha256-GtwcdrWLduYRoBvL28XRb/1Gk/S24RpbTrjpX9ikbYg=",
+        "owner": "cameronfyfe",
+        "repo": "nixpkgs",
+        "rev": "7eac722675d6f38fc46866632d3aa6090851df5a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cameronfyfe",
+        "ref": "add-present-cli",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-miden": "nixpkgs-miden",
+        "nixpkgs-present": "nixpkgs-present"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

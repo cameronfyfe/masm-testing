@@ -1,0 +1,12 @@
+use.std::crypto::hashes::blake3
+
+begin
+
+  # load 64 bytes from the advice stack to the main stack
+  # each value is a 32-bit value for the hash computation
+  adv_push.16
+
+  # perform blake3 hash on 64 byte payload
+  exec.blake3::hash_2to1
+
+end
